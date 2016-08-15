@@ -155,7 +155,7 @@ func (c *Client) Execute(s string) (r *Result, e error) {
 		129: 14400, // output speed = 14.4kbaud
 	}
 
-	if e := ses.RequestPty("xterm", 80, 40, tmodes); e != nil {
+	if e := ses.RequestPty("xterm", 80, 4000, tmodes); e != nil {
 		return nil, e
 	}
 
